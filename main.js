@@ -7,7 +7,7 @@ const ifsc =await res.json();
 // Get matches to current input
 let matches = ifsc.filter(ifsc => {
     const regex = new RegExp(`^${searchText}`, 'gi');
-    return ifsc.CITY_I.match(regex) || ifsc.CITY_II.match(regex) || ifsc.BRANCH.match(regex);
+    return ifsc.BRANCH.match(regex);
 });
 
 if(searchText.length===0){
